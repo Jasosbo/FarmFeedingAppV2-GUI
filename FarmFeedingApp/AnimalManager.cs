@@ -13,6 +13,7 @@ namespace FarmFeedingApp
         List<FarmAnimal> animals;
         string file = "SavedAnimals.txt";
 
+        
 
         //dictionary of the species and breeds.
         Dictionary<string, string[]> animalsDictionary = new Dictionary<string, string[]>()
@@ -32,9 +33,6 @@ namespace FarmFeedingApp
         {
             33.05f, 8.49f, 50f, 37.70f
         };
-
-
-
 
         public AnimalManager()
         {
@@ -227,7 +225,7 @@ namespace FarmFeedingApp
             foreach (KeyValuePair<string, string[]> animalType in animalsDictionary)
             {
 
-                costSummary += $" {animalType.Key} Total consumption cost: {CalculateSpeciesConsumptionCost()[index]}\n";
+                costSummary += $" {animalType.Key} total consumption cost:      {CalculateSpeciesConsumptionCost()[index]}\n";
 
                 index++;
 
@@ -245,7 +243,7 @@ namespace FarmFeedingApp
             foreach (KeyValuePair<string, string[]> animalType in animalsDictionary)
             {
 
-                costSummary += $"{animalType.Key} Total consumption cost: {CalculateSpeciesFoodConsumption()[index]}\n";
+                costSummary += $"{animalType.Key} total consumption:       {CalculateSpeciesFoodConsumption()[index]}\n";
 
                 index++;
                 

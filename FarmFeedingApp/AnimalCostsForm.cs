@@ -18,6 +18,7 @@ namespace FarmFeedingApp
             InitializeComponent();
             this.am = am;
             rtbxCostSummarys.Text = am.SpeciesConsumptionCostSummary();
+            pbxMoney.ImageLocation = @"Money.jpg";
         }
 
         private void btnHome_Click(object sender, EventArgs e)

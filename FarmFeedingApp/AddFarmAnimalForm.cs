@@ -13,11 +13,14 @@ namespace FarmFeedingApp
     public partial class AddFarmAnimalForm : Form
     {
         AnimalManager am;
+
+        public const string errorMessage = "ERROR: Please Select a option.";
         public AddFarmAnimalForm(AnimalManager am)
         {
             this.am = am;
             InitializeComponent();
-            
+            pbxAnimal.ImageLocation = $"farmAnimals.jpg";
+
             dtpDOB.MaxDate = DateTime.Now;
             dtpDOB.Value = DateTime.Now;
             foreach (string species in am.GetSpecies())
@@ -32,7 +35,7 @@ namespace FarmFeedingApp
         {
             if (String.IsNullOrWhiteSpace(cbxSpecies.Text) || String.IsNullOrWhiteSpace(cbxBreed.Text) || String.IsNullOrWhiteSpace(tbxName.Text)) 
             {
-                MessageBox.Show("ERROR: Please Select a option.");
+                MessageBox.Show(errorMessage);
             }
             else
             {
@@ -52,7 +55,9 @@ namespace FarmFeedingApp
 
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbxBreed.Items.Clear(); 
+            cbxBreed.Items.Clear();
+
+            pbxAnimal.ImageLocation = $"{cbxSpecies.Text}.jpg";
 
             foreach (string breed in am.GetBreeds(cbxSpecies.Text))
             {
