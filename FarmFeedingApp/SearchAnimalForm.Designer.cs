@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchAnimalForm));
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.lvSearchAnimal = new System.Windows.Forms.ListView();
             this.tbxSearchAnimal = new System.Windows.Forms.TextBox();
@@ -64,47 +65,58 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(625, 384);
+            this.btnContinue.BackColor = System.Drawing.Color.White;
+            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Location = new System.Drawing.Point(607, 385);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(146, 54);
+            this.btnContinue.Size = new System.Drawing.Size(164, 53);
             this.btnContinue.TabIndex = 2;
             this.btnContinue.Text = "Add consumption";
-            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.UseVisualStyleBackColor = false;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // lblSearchAnimal
             // 
             this.lblSearchAnimal.AutoSize = true;
-            this.lblSearchAnimal.Location = new System.Drawing.Point(264, 21);
+            this.lblSearchAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchAnimal.Location = new System.Drawing.Point(246, 19);
             this.lblSearchAnimal.Name = "lblSearchAnimal";
-            this.lblSearchAnimal.Size = new System.Drawing.Size(155, 20);
+            this.lblSearchAnimal.Size = new System.Drawing.Size(287, 36);
             this.lblSearchAnimal.TabIndex = 3;
             this.lblSearchAnimal.Text = "Search for an animal";
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(35, 385);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(90, 41);
+            this.btnCancel.Size = new System.Drawing.Size(110, 53);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnViewSummary
             // 
-            this.btnViewSummary.Location = new System.Drawing.Point(625, 320);
+            this.btnViewSummary.BackColor = System.Drawing.Color.White;
+            this.btnViewSummary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnViewSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewSummary.Location = new System.Drawing.Point(607, 320);
             this.btnViewSummary.Name = "btnViewSummary";
-            this.btnViewSummary.Size = new System.Drawing.Size(146, 55);
+            this.btnViewSummary.Size = new System.Drawing.Size(164, 55);
             this.btnViewSummary.TabIndex = 5;
             this.btnViewSummary.Text = "View Summary";
-            this.btnViewSummary.UseVisualStyleBackColor = true;
+            this.btnViewSummary.UseVisualStyleBackColor = false;
             this.btnViewSummary.Click += new System.EventHandler(this.btnViewSummary_Click);
             // 
             // SearchAnimalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnViewSummary);
             this.Controls.Add(this.btnCancel);
@@ -112,6 +124,7 @@
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.tbxSearchAnimal);
             this.Controls.Add(this.lvSearchAnimal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchAnimalForm";
             this.Text = "SearchAnimalForm";
             this.ResumeLayout(false);

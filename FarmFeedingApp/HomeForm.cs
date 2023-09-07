@@ -17,6 +17,8 @@ namespace FarmFeedingApp
         {
             this.am = am;
             InitializeComponent();
+            
+            pbxLogo.ImageLocation = $"Farm-Feeding-App-logo.jpg";
         }
 
         private void btnAnimal_Click(object sender, EventArgs e)

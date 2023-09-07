@@ -20,6 +20,7 @@ namespace FarmFeedingApp
             this.am = am;
             InitializeComponent();
             pbxAnimal.ImageLocation = $"farmAnimals.jpg";
+           
 
             dtpDOB.MaxDate = DateTime.Now;
             dtpDOB.Value = DateTime.Now;
@@ -36,6 +37,8 @@ namespace FarmFeedingApp
             if (String.IsNullOrWhiteSpace(cbxSpecies.Text) || String.IsNullOrWhiteSpace(cbxBreed.Text) || String.IsNullOrWhiteSpace(tbxName.Text)) 
             {
                 MessageBox.Show(errorMessage);
+
+
             }
             else
             {

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace FarmFeedingApp
 {
@@ -158,7 +159,7 @@ namespace FarmFeedingApp
         //calculates the food consumed be each species type
         public List<float> CalculateSpeciesFoodConsumption()
         {
-            List<float> speciesConsumption = new List<float>() {0, 0, 0 ,0 };
+            List<float> speciesConsumption = new List<float>() { 0, 0, 0 , 0 };
             
             foreach (FarmAnimal farmAnimal in animals)
             {
@@ -225,31 +226,33 @@ namespace FarmFeedingApp
             foreach (KeyValuePair<string, string[]> animalType in animalsDictionary)
             {
 
-                costSummary += $" {animalType.Key} total consumption cost:      {CalculateSpeciesConsumptionCost()[index]}\n";
+                
+                costSummary += $"{animalType.Key} total consumption cost:" + new string(' ', 20 - animalType.Key.Length) + "$"+Math.Round(CalculateSpeciesConsumptionCost()[index],2) + "\n";
 
                 index++;
 
             }
 
-            costSummary += "\n\n Total consumption cost: " + CalculateSpeciesConsumptionCost().Sum();      
+            costSummary += "\n\n Total consumption cost:        $" + CalculateSpeciesConsumptionCost().Sum();      
             return costSummary;
         }
         public string SpeciesConsumptionSummarys()
         {
             string costSummary = "";
             int index = 0;
-            
+           
+          
 
             foreach (KeyValuePair<string, string[]> animalType in animalsDictionary)
             {
-
-                costSummary += $"{animalType.Key} total consumption:       {CalculateSpeciesFoodConsumption()[index]}\n";
-
+                
+                costSummary += $"{animalType.Key} total consumption:" + new string(' ', 20 - animalType.Key.Length) + CalculateSpeciesFoodConsumption()[index] + "kg\n";
+                
                 index++;
                 
 
             }
-            costSummary += "\n\n Total consumption: " + CalculateSpeciesFoodConsumption().Sum();
+            costSummary += "\n\n Total consumption:         " + CalculateSpeciesFoodConsumption().Sum()+"kg";
             return costSummary;
         }
       

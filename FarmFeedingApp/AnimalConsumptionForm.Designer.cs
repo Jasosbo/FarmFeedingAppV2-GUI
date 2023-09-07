@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalConsumptionForm));
             this.nudConsumption = new System.Windows.Forms.NumericUpDown();
             this.lblFoodConsumed = new System.Windows.Forms.Label();
             this.lblconsumpD1 = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@
             0,
             0,
             0});
-            this.nudConsumption.Location = new System.Drawing.Point(84, 218);
+            this.nudConsumption.Location = new System.Drawing.Point(122, 216);
             this.nudConsumption.Maximum = new decimal(new int[] {
             500,
             0,
@@ -66,20 +67,21 @@
             // lblconsumpD1
             // 
             this.lblconsumpD1.AutoSize = true;
-            this.lblconsumpD1.Location = new System.Drawing.Point(80, 177);
+            this.lblconsumpD1.Location = new System.Drawing.Point(118, 181);
             this.lblconsumpD1.Name = "lblconsumpD1";
-            this.lblconsumpD1.Size = new System.Drawing.Size(128, 20);
+            this.lblconsumpD1.Size = new System.Drawing.Size(159, 20);
             this.lblconsumpD1.TabIndex = 2;
-            this.lblconsumpD1.Text = "Food consumed:";
+            this.lblconsumpD1.Text = "Food consumed (kg):";
             // 
             // btnEnterConsumption
             // 
-            this.btnEnterConsumption.Location = new System.Drawing.Point(140, 329);
+            this.btnEnterConsumption.BackColor = System.Drawing.Color.White;
+            this.btnEnterConsumption.Location = new System.Drawing.Point(90, 284);
             this.btnEnterConsumption.Name = "btnEnterConsumption";
             this.btnEnterConsumption.Size = new System.Drawing.Size(224, 50);
             this.btnEnterConsumption.TabIndex = 15;
             this.btnEnterConsumption.Text = "Enter Consumption";
-            this.btnEnterConsumption.UseVisualStyleBackColor = true;
+            this.btnEnterConsumption.UseVisualStyleBackColor = false;
             this.btnEnterConsumption.Click += new System.EventHandler(this.btnEnterConsumption_Click);
             // 
             // rtbAnimalSummary
@@ -92,18 +94,20 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(649, 390);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 37);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AnimalConsumptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.rtbAnimalSummary);
@@ -111,6 +115,7 @@
             this.Controls.Add(this.lblconsumpD1);
             this.Controls.Add(this.lblFoodConsumed);
             this.Controls.Add(this.nudConsumption);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AnimalConsumptionForm";
             this.Text = "AnimalConsumptionForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudConsumption)).EndInit();

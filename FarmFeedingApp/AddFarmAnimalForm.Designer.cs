@@ -30,6 +30,7 @@ namespace FarmFeedingApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddFarmAnimalForm));
             this.lblAddFarmAnimal = new System.Windows.Forms.Label();
             this.lblSpecies = new System.Windows.Forms.Label();
             this.cbxSpecies = new System.Windows.Forms.ComboBox();
@@ -48,20 +49,19 @@ namespace FarmFeedingApp
             // lblAddFarmAnimal
             // 
             this.lblAddFarmAnimal.AutoSize = true;
-            this.lblAddFarmAnimal.Location = new System.Drawing.Point(210, 14);
-            this.lblAddFarmAnimal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddFarmAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddFarmAnimal.Location = new System.Drawing.Point(260, 21);
             this.lblAddFarmAnimal.Name = "lblAddFarmAnimal";
-            this.lblAddFarmAnimal.Size = new System.Drawing.Size(86, 13);
+            this.lblAddFarmAnimal.Size = new System.Drawing.Size(244, 36);
             this.lblAddFarmAnimal.TabIndex = 0;
             this.lblAddFarmAnimal.Text = "Add Farm Animal";
             // 
             // lblSpecies
             // 
             this.lblSpecies.AutoSize = true;
-            this.lblSpecies.Location = new System.Drawing.Point(28, 60);
-            this.lblSpecies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpecies.Location = new System.Drawing.Point(85, 92);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(107, 13);
+            this.lblSpecies.Size = new System.Drawing.Size(161, 20);
             this.lblSpecies.TabIndex = 1;
             this.lblSpecies.Text = "Enter Animal Species";
             // 
@@ -69,20 +69,18 @@ namespace FarmFeedingApp
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(28, 75);
-            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxSpecies.Location = new System.Drawing.Point(89, 115);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(102, 21);
+            this.cbxSpecies.Size = new System.Drawing.Size(151, 28);
             this.cbxSpecies.TabIndex = 2;
             this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
             // lblBreed
             // 
             this.lblBreed.AutoSize = true;
-            this.lblBreed.Location = new System.Drawing.Point(28, 105);
-            this.lblBreed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBreed.Location = new System.Drawing.Point(85, 162);
             this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(97, 13);
+            this.lblBreed.Size = new System.Drawing.Size(147, 20);
             this.lblBreed.TabIndex = 3;
             this.lblBreed.Text = "Enter Animal Breed";
             // 
@@ -93,89 +91,89 @@ namespace FarmFeedingApp
             this.cbxBreed.Items.AddRange(new object[] {
             "Brown",
             "Silkie"});
-            this.cbxBreed.Location = new System.Drawing.Point(28, 120);
-            this.cbxBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxBreed.Location = new System.Drawing.Point(89, 185);
             this.cbxBreed.Name = "cbxBreed";
-            this.cbxBreed.Size = new System.Drawing.Size(102, 21);
+            this.cbxBreed.Size = new System.Drawing.Size(151, 28);
             this.cbxBreed.TabIndex = 4;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(28, 147);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(85, 226);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(97, 13);
+            this.lblName.Size = new System.Drawing.Size(146, 20);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Enter Animal Name";
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(28, 162);
-            this.tbxName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxName.Location = new System.Drawing.Point(89, 249);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(102, 20);
+            this.tbxName.Size = new System.Drawing.Size(151, 26);
             this.tbxName.TabIndex = 6;
             // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(28, 192);
-            this.lblDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDOB.Location = new System.Drawing.Point(85, 295);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(92, 13);
+            this.lblDOB.Size = new System.Drawing.Size(139, 20);
             this.lblDOB.TabIndex = 7;
             this.lblDOB.Text = "Enter Animal DOB";
             // 
             // dtpDOB
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(28, 213);
-            this.dtpDOB.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDOB.Location = new System.Drawing.Point(89, 318);
             this.dtpDOB.MaxDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.dtpDOB.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(102, 20);
+            this.dtpDOB.Size = new System.Drawing.Size(150, 26);
             this.dtpDOB.TabIndex = 8;
             this.dtpDOB.Value = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             // 
             // btnAddAnimal
             // 
-            this.btnAddAnimal.Location = new System.Drawing.Point(31, 246);
-            this.btnAddAnimal.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddAnimal.BackColor = System.Drawing.Color.White;
+            this.btnAddAnimal.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnAddAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAnimal.Location = new System.Drawing.Point(106, 377);
             this.btnAddAnimal.Name = "btnAddAnimal";
-            this.btnAddAnimal.Size = new System.Drawing.Size(79, 23);
+            this.btnAddAnimal.Size = new System.Drawing.Size(118, 35);
             this.btnAddAnimal.TabIndex = 9;
             this.btnAddAnimal.Text = "Add Animal";
-            this.btnAddAnimal.UseVisualStyleBackColor = true;
+            this.btnAddAnimal.UseVisualStyleBackColor = false;
             this.btnAddAnimal.Click += new System.EventHandler(this.btnAddAnimal_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCancel.Location = new System.Drawing.Point(391, 242);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(586, 372);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 26);
+            this.btnCancel.Size = new System.Drawing.Size(148, 40);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // pbxAnimal
             // 
-            this.pbxAnimal.Location = new System.Drawing.Point(267, 60);
+            this.pbxAnimal.Location = new System.Drawing.Point(458, 103);
+            this.pbxAnimal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbxAnimal.Name = "pbxAnimal";
-            this.pbxAnimal.Size = new System.Drawing.Size(184, 138);
+            this.pbxAnimal.Size = new System.Drawing.Size(276, 212);
             this.pbxAnimal.TabIndex = 11;
             this.pbxAnimal.TabStop = false;
             // 
             // AddFarmAnimalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.pbxAnimal);
             this.Controls.Add(this.cbxSpecies);
             this.Controls.Add(this.btnCancel);
@@ -188,7 +186,7 @@ namespace FarmFeedingApp
             this.Controls.Add(this.lblBreed);
             this.Controls.Add(this.lblSpecies);
             this.Controls.Add(this.lblAddFarmAnimal);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddFarmAnimalForm";
             this.Text = "AddFarmAnimalForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxAnimal)).EndInit();

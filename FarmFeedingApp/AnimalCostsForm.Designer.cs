@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalCostsForm));
             this.rtbxCostSummarys = new System.Windows.Forms.RichTextBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnCostTotals = new System.Windows.Forms.Button();
@@ -38,65 +39,70 @@
             // 
             // rtbxCostSummarys
             // 
-            this.rtbxCostSummarys.Location = new System.Drawing.Point(11, 38);
-            this.rtbxCostSummarys.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbxCostSummarys.BackColor = System.Drawing.Color.White;
+            this.rtbxCostSummarys.Location = new System.Drawing.Point(16, 58);
             this.rtbxCostSummarys.Name = "rtbxCostSummarys";
             this.rtbxCostSummarys.ReadOnly = true;
-            this.rtbxCostSummarys.Size = new System.Drawing.Size(273, 174);
+            this.rtbxCostSummarys.Size = new System.Drawing.Size(408, 266);
             this.rtbxCostSummarys.TabIndex = 0;
             this.rtbxCostSummarys.Text = "";
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(415, 245);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Location = new System.Drawing.Point(622, 377);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(71, 24);
+            this.btnHome.Size = new System.Drawing.Size(106, 37);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnCostTotals
             // 
-            this.btnCostTotals.Location = new System.Drawing.Point(30, 235);
-            this.btnCostTotals.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCostTotals.BackColor = System.Drawing.Color.White;
+            this.btnCostTotals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCostTotals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCostTotals.Location = new System.Drawing.Point(45, 362);
             this.btnCostTotals.Name = "btnCostTotals";
-            this.btnCostTotals.Size = new System.Drawing.Size(77, 34);
+            this.btnCostTotals.Size = new System.Drawing.Size(154, 75);
             this.btnCostTotals.TabIndex = 2;
             this.btnCostTotals.Text = "Consumption Summarys";
-            this.btnCostTotals.UseVisualStyleBackColor = true;
+            this.btnCostTotals.UseVisualStyleBackColor = false;
             this.btnCostTotals.Click += new System.EventHandler(this.btnCostTotals_Click);
             // 
             // lblCostSummarys
             // 
             this.lblCostSummarys.AutoSize = true;
-            this.lblCostSummarys.Location = new System.Drawing.Point(169, 10);
-            this.lblCostSummarys.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCostSummarys.Location = new System.Drawing.Point(254, 15);
             this.lblCostSummarys.Name = "lblCostSummarys";
-            this.lblCostSummarys.Size = new System.Drawing.Size(187, 13);
+            this.lblCostSummarys.Size = new System.Drawing.Size(284, 20);
             this.lblCostSummarys.TabIndex = 3;
             this.lblCostSummarys.Text = "Species Consumption Cost Summarys:";
             // 
             // pbxMoney
             // 
-            this.pbxMoney.Location = new System.Drawing.Point(331, 37);
+            this.pbxMoney.Location = new System.Drawing.Point(496, 57);
+            this.pbxMoney.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbxMoney.Name = "pbxMoney";
-            this.pbxMoney.Size = new System.Drawing.Size(155, 188);
+            this.pbxMoney.Size = new System.Drawing.Size(232, 289);
             this.pbxMoney.TabIndex = 4;
             this.pbxMoney.TabStop = false;
             // 
             // AnimalCostsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.pbxMoney);
             this.Controls.Add(this.lblCostSummarys);
             this.Controls.Add(this.btnCostTotals);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.rtbxCostSummarys);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AnimalCostsForm";
             this.Text = "AnimalCostsForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxMoney)).EndInit();
