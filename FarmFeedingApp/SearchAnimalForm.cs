@@ -64,12 +64,8 @@ namespace FarmFeedingApp
             }
 
         }
-        //Perform the filter of animals
-        private void FilterTxt_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
+        //closes search form and opens home form
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -77,13 +73,14 @@ namespace FarmFeedingApp
             myNewForm.Closed += (s, args) => this.Close();
             myNewForm.Show();
         }
-
+        //filters the users search input of the animals in the text file
         private void tbxSearchAnimal_TextChanged(object sender, EventArgs e)
         {
             dv.RowFilter = string.Format("Name Like '%{0}%'", tbxSearchAnimal.Text); // Code from https://www.youtube.com/watch?v=cycavkXug5U
             PopulateListView(dv);
         }
 
+        //opens the enter consumption page to allow the user to add another consumption under the selected animal
         private void btnContinue_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -92,12 +89,14 @@ namespace FarmFeedingApp
             myNewForm.Show();
         }
 
+        //finds the selected animal that the user has clicked on
         private void lvSearchAnimal_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedAnimal = lvSearchAnimal.FocusedItem.SubItems[2].Text;
             
         }
 
+        //displays the summary of the selected animal.
         private void btnViewSummary_Click(object sender, EventArgs e)
         {
             MessageBox.Show(am.AnimalSummary(selectedAnimal));

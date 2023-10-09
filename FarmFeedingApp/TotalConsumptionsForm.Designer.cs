@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TotalConsumptionsForm));
             this.lblTotalConsumption = new System.Windows.Forms.Label();
             this.rtbxConsumptionSummarys = new System.Windows.Forms.RichTextBox();
             this.btnHome = new System.Windows.Forms.Button();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.rtbxConsumptionSummarys);
             this.Controls.Add(this.lblTotalConsumption);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TotalConsumptionsForm";
             this.Text = "TotalConsumptionsForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxFeedPicture)).EndInit();

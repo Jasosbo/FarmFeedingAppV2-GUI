@@ -13,15 +13,15 @@ namespace FarmFeedingApp
     public partial class AddFarmAnimalForm : Form
     {
         AnimalManager am;
-
-        public const string errorMessage = "ERROR: Please Select a option.";
+        //constant error mesage
+        public const string ERRORMESSAGE = "ERROR: Please Select a option.";
         public AddFarmAnimalForm(AnimalManager am)
         {
             this.am = am;
             InitializeComponent();
-            pbxAnimal.ImageLocation = $"farmAnimals.jpg";
+            pbxAnimal.ImageLocation = $"Images/FarmAnimals.jpg";
            
-
+            
             dtpDOB.MaxDate = DateTime.Now;
             dtpDOB.Value = DateTime.Now;
             foreach (string species in am.GetSpecies())
@@ -31,12 +31,12 @@ namespace FarmFeedingApp
             
 
         }
-
+        //adds animal to text file - checks values - takes user to consumption page
         private void btnAddAnimal_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(cbxSpecies.Text) || String.IsNullOrWhiteSpace(cbxBreed.Text) || String.IsNullOrWhiteSpace(tbxName.Text)) 
             {
-                MessageBox.Show(errorMessage);
+                MessageBox.Show(ERRORMESSAGE);
 
 
             }
@@ -55,12 +55,12 @@ namespace FarmFeedingApp
             
 
         }
-
+        //actions a change in the combo box according to species choice
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbxBreed.Items.Clear();
 
-            pbxAnimal.ImageLocation = $"{cbxSpecies.Text}.jpg";
+            pbxAnimal.ImageLocation = $"Images/{cbxSpecies.Text}.jpg";
 
             foreach (string breed in am.GetBreeds(cbxSpecies.Text))
             {
@@ -68,7 +68,7 @@ namespace FarmFeedingApp
             }
 
         }
-
+        //takes the user back to home page
         private void btnCancel_Click(object sender, EventArgs e)
         {
             // close animal form and open home form
@@ -77,7 +77,7 @@ namespace FarmFeedingApp
             myNewForm.Closed += (s, args) => this.Close();
             myNewForm.Show();
         }
-        //return the ticket holder name as a captitalised string
+        //return the animal name as a captitalised string
         private string CapitaliseName()
         {
             string name = tbxName.Text[0].ToString().ToUpper();

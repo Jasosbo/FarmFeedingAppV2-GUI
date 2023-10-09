@@ -18,9 +18,9 @@ namespace FarmFeedingApp
             InitializeComponent();
             this.am = am;
             rtbxCostSummarys.Text = am.SpeciesConsumptionCostSummary();
-            pbxMoney.ImageLocation = @"Money.jpg";
+            pbxMoney.ImageLocation = $"Images/Money.jpg";
         }
-
+       //closes cost forms and opens home form
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -28,8 +28,8 @@ namespace FarmFeedingApp
             myNewForm.Closed += (s, args) => this.Close();
             myNewForm.Show();
         }
-
-        private void btnCostTotals_Click(object sender, EventArgs e)
+        //closes cost form and opens consumption totals page
+        private void btnConsumptionTotals_Click(object sender, EventArgs e)
         {
             this.Hide();
             TotalConsumptionsForm myNewForm = new TotalConsumptionsForm(am);

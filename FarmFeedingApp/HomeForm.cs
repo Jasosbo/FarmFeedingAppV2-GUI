@@ -18,9 +18,10 @@ namespace FarmFeedingApp
             this.am = am;
             InitializeComponent();
             
-            pbxLogo.ImageLocation = $"Farm-Feeding-App-logo.jpg";
+            pbxLogo.ImageLocation = $"Images/Farm-Feeding-App-logo.jpg";
         }
 
+        //opens add animal form
         private void btnAnimal_Click(object sender, EventArgs e)
         {
             
@@ -30,6 +31,7 @@ namespace FarmFeedingApp
             myNewForm.Show();
         }
 
+        //opens farm manager form
         private void btnFarmManager_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -38,6 +40,7 @@ namespace FarmFeedingApp
             myNewForm.Show();
         }
 
+        //opens tbe search form for animals
         private void btnAddToAnimal_Click(object sender, EventArgs e)
         {
             this.Hide();

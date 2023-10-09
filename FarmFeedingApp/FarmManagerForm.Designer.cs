@@ -83,7 +83,7 @@
             this.btnHome.TabIndex = 3;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.button1_Click);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // FarmManagerForm
             // 

@@ -32,7 +32,7 @@ namespace FarmFeedingApp
             rtbAnimalSummary.Text = am.AnimalSummary(selectedAnimal);
 
         }
-
+        //enters consumption into text file under the animals details
         private void btnEnterConsumption_Click(object sender, EventArgs e)
         {
             if (selectedAnimal==null)
@@ -57,6 +57,7 @@ namespace FarmFeedingApp
             myNewForm.Show();
         }
 
+        //closes consumption form and takes the user back to the home page
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();

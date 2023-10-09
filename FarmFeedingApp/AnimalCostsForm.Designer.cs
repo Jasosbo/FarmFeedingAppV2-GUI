@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimalCostsForm));
             this.rtbxCostSummarys = new System.Windows.Forms.RichTextBox();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnCostTotals = new System.Windows.Forms.Button();
+            this.btnConsumptionTotals = new System.Windows.Forms.Button();
             this.lblCostSummarys = new System.Windows.Forms.Label();
             this.pbxMoney = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMoney)).BeginInit();
@@ -60,18 +60,18 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnCostTotals
+            // btnConsumptionTotals
             // 
-            this.btnCostTotals.BackColor = System.Drawing.Color.White;
-            this.btnCostTotals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCostTotals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCostTotals.Location = new System.Drawing.Point(45, 362);
-            this.btnCostTotals.Name = "btnCostTotals";
-            this.btnCostTotals.Size = new System.Drawing.Size(154, 75);
-            this.btnCostTotals.TabIndex = 2;
-            this.btnCostTotals.Text = "Consumption Summarys";
-            this.btnCostTotals.UseVisualStyleBackColor = false;
-            this.btnCostTotals.Click += new System.EventHandler(this.btnCostTotals_Click);
+            this.btnConsumptionTotals.BackColor = System.Drawing.Color.White;
+            this.btnConsumptionTotals.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnConsumptionTotals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsumptionTotals.Location = new System.Drawing.Point(45, 362);
+            this.btnConsumptionTotals.Name = "btnConsumptionTotals";
+            this.btnConsumptionTotals.Size = new System.Drawing.Size(154, 75);
+            this.btnConsumptionTotals.TabIndex = 2;
+            this.btnConsumptionTotals.Text = "Consumption Summarys";
+            this.btnConsumptionTotals.UseVisualStyleBackColor = false;
+            this.btnConsumptionTotals.Click += new System.EventHandler(this.btnConsumptionTotals_Click);
             // 
             // lblCostSummarys
             // 
@@ -99,7 +99,7 @@
             this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.pbxMoney);
             this.Controls.Add(this.lblCostSummarys);
-            this.Controls.Add(this.btnCostTotals);
+            this.Controls.Add(this.btnConsumptionTotals);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.rtbxCostSummarys);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -115,7 +115,7 @@
 
         private System.Windows.Forms.RichTextBox rtbxCostSummarys;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnCostTotals;
+        private System.Windows.Forms.Button btnConsumptionTotals;
         private System.Windows.Forms.Label lblCostSummarys;
         private System.Windows.Forms.PictureBox pbxMoney;
     }
