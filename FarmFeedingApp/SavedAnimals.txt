@@ -1,3 +1,1 @@
-﻿Chicken,Brown,Fred,02#12#2022,21#12#34
-Duck,Pekin,Bob,22#04#2021,14
-Alpaca,Suri,Ted,15#01#2023,76#34#12#23#48#23#78
+﻿

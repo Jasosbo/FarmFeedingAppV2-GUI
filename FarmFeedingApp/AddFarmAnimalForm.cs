@@ -14,7 +14,7 @@ namespace FarmFeedingApp
     {
         AnimalManager am;
         //constant error mesage
-        public const string ERRORMESSAGE = "ERROR: Please Select a option.";
+        public const string ERRORMESSAGE = "ERROR: Please fill in all options";
         public AddFarmAnimalForm(AnimalManager am)
         {
             this.am = am;
